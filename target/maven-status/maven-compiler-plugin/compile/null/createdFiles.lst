@@ -1,0 +1,15 @@
+com\futureskills\dao\ClusterUsuarioDAO.class
+com\futureskills\domain\Usuario.class
+com\futureskills\service\RecomendacaoService.class
+com\futureskills\resource\DebugResource.class
+com\futureskills\domain\IaLog.class
+com\futureskills\resource\UsuarioResource.class
+com\futureskills\domain\ClusterUsuario.class
+com\futureskills\resource\ClusterResource.class
+com\futureskills\dao\IaLogDAO.class
+com\futureskills\resource\RecomendacaoResource.class
+com\futureskills\domain\Recomendacao.class
+com\futureskills\resource\HealthResource.class
+com\futureskills\dao\UsuarioDAO.class
+com\futureskills\infra\GlobalExceptionMapper.class
+com\futureskills\dao\RecomendacaoDAO.class

@@ -1,0 +1,15 @@
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\dao\ClusterUsuarioDAO.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\dao\IaLogDAO.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\dao\RecomendacaoDAO.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\dao\UsuarioDAO.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\domain\ClusterUsuario.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\domain\IaLog.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\domain\Recomendacao.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\domain\Usuario.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\infra\GlobalExceptionMapper.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\resource\ClusterResource.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\resource\DebugResource.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\resource\HealthResource.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\resource\RecomendacaoResource.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\resource\UsuarioResource.java
+C:\Users\guilh\OneDrive\Desktop\futureskills-api\src\main\java\com\futureskills\service\RecomendacaoService.java

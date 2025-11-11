@@ -1,0 +1,71 @@
+{
+  "_type": "export",
+  "__export_format": 4,
+  "__export_date": "2025-11-10T00:00:00.000Z",
+  "__export_source": "FutureSkills-Assistant",
+  "resources": [
+    {
+      "_id": "wrk_futureskills",
+      "_type": "workspace",
+      "name": "FutureSkills API"
+    },
+    {
+      "_id": "fld_api",
+      "_type": "request_group",
+      "name": "API",
+      "parentId": "wrk_futureskills"
+    },
+    {
+      "_id": "req_create_user",
+      "_type": "request",
+      "parentId": "fld_api",
+      "name": "POST /api/usuarios",
+      "method": "POST",
+      "url": "http://localhost:8080/api/usuarios",
+      "body": {
+        "mimeType": "application/json",
+        "text": "{\"nome\": \"Ana\", \"email\": \"ana@gs.com\", \"interesse\": \"data\"}"
+      }
+    },
+    {
+      "_id": "req_list_users",
+      "_type": "request",
+      "parentId": "fld_api",
+      "name": "GET /api/usuarios",
+      "method": "GET",
+      "url": "http://localhost:8080/api/usuarios"
+    },
+    {
+      "_id": "req_gen_rec",
+      "_type": "request",
+      "parentId": "fld_api",
+      "name": "POST /api/recomendacao/{idUsuario}",
+      "method": "POST",
+      "url": "http://localhost:8080/api/recomendacao/1"
+    },
+    {
+      "_id": "req_hist",
+      "_type": "request",
+      "parentId": "fld_api",
+      "name": "GET /api/recomendacao/usuario/{idUsuario}",
+      "method": "GET",
+      "url": "http://localhost:8080/api/recomendacao/usuario/1"
+    },
+    {
+      "_id": "req_cluster",
+      "_type": "request",
+      "parentId": "fld_api",
+      "name": "GET /api/cluster/usuario/{idUsuario}",
+      "method": "GET",
+      "url": "http://localhost:8080/api/cluster/usuario/1"
+    },
+    {
+      "_id": "req_health",
+      "_type": "request",
+      "parentId": "fld_api",
+      "name": "GET /api/health",
+      "method": "GET",
+      "url": "http://localhost:8080/api/health"
+    }
+  ]
+}
