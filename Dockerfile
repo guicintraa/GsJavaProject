@@ -1,27 +1,25 @@
 # syntax=docker/dockerfile:1
 
-# ===== BUILD =====
-FROM maven:3.9.9-eclipse-temurin-21 AS build
+# ====== BUILD ======
+FROM maven:3.9.9-eclipse-temurin-17 AS build
 WORKDIR /workspace/app
 
-# Copia apenas o pom para cache de dependências
 COPY pom.xml ./
 RUN mvn -q -DskipTests dependency:go-offline
 
-# Copia o código e empacota em FAST-JAR
 COPY src ./src
+# força fast-jar
 RUN mvn -DskipTests -Dquarkus.package.type=fast-jar clean package
 
-# ===== RUNTIME =====
-FROM eclipse-temurin:21-jre
+# ====== RUNTIME ======
+FROM eclipse-temurin:17-jre
 WORKDIR /app
 
-# Copia o layout gerado pelo FAST-JAR
-COPY --from=build /workspace/app/target/quarkus-app/lib/     /app/lib/
-COPY --from=build /workspace/app/target/quarkus-app/app/     /app/app/
-COPY --from=build /workspace/app/target/quarkus-app/quarkus/ /app/quarkus/
+# Copia TUDO que o fast-jar gera (inclui quarkus-run.jar, lib/, app/, quarkus/)
+COPY --from=build /workspace/app/target/quarkus-app/ /app/
 
 ENV JAVA_OPTS="-Dquarkus.http.host=0.0.0.0 -Djava.util.logging.manager=org.jboss.logmanager.LogManager"
-
 EXPOSE 8080
-ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar /app/quarkus/quarkus-run.jar"]
+
+# caminho correto do jar
+ENTRYPOINT ["sh","-c","java $JAVA_OPTS -jar /app/quarkus-run.jar"]
